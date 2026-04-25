@@ -12,10 +12,76 @@
 </head>
 <body>
     <header>
-        <h1>FranCriolloWeb</h1>
+        <h1 id="titulo">FranCriolloWeb</h1>
         <h6>Esta pagina que estan viendo fue hecha por mi con mis pocos (casi nulos) conocimientos en HTML y CSS</h6>
-    </header>
+     </header>
+        <h2 id="frase"></h2>
     <main>
+        <div>
+            <script>
+                const frases = [
+                "No sé por que estan estas frases",
+                "Me cago de hambre",
+                "67 JAJAJAJAJAJAJAAJ 67676767",
+                "Chupala",
+                "Todos los insultos que hayan sido dirijos al usuario son en forma de broma, el creador nunca quizo ofender a nadie",
+                "LA PAGINA NO LA HIZO FRAN, ME TIENE SECUESTRADO EN EL SOTANO, NO ME DA DE COMER HACE DIAS",
+                "Cualquier mensaje raro que hayan leido es mentira",
+                "A quien se le habra ocurrido hacer esta pagina de mrd no?",
+                "opqwruinvysuxmvoq0jgonis0invsenf9832hfns87vg4n39ghe278",
+                "01110000 01110101 01110100 01101111 00100000 01100101 01101100 00100000 01110001 01110101 01100101 00100000 01101100 01100101 01100101",
+                "74 65 20 68 69 63 65 20 70 65 72 64 65 72 20 76 61 6C 69 6F 73 6F 73 20 6D 69 6E 75 74 6F 73 20 64 65 20 74 75 20 76 69 64 61 20 6E 6F 3F",
+                "6969696969696969696969",
+                "Tremendo brainrot estas frases",
+                "Hola mi amor",
+                "Te extrañe bebe, donde estabas?",
+                "Why tf am i in english?",
+                "bruh",
+                "Annie are you okay?",
+                "CHICKEN JOCKEY",
+                "Oid mortales, el grito sagrado",
+                "wtf bro like wdym lmao",
+                "Minecraft mi amor",
+                "!!!Si este texto lo estas leyendo avisame, es importarnte!!!",
+                "Al pan pan y albino vino",
+                "Exitos, porque la suerte es para mediocres",
+                "se nota la originalidad?",
+                "esto esta hecho a mano",
+                "Si la pagina esta linda, quiere decir que me mori y me robo la compu un programador",
+                "? ?? ?? ?   ? ? ??   ??   ?? ?? ??   ? ?? ? ?? ?",
+                "Hola",
+                "Chau",
+                "Si estas leyendo esto... Gracias, por todo",
+                "Che, nunca llegue tan lejos",
+                "sale un cs?",
+                "sale un mine?",
+                "jijijija",
+
+                ];
+                const hoy = new Date().toISOString().split("T")[0];
+                const dataGuardada = JSON.parse(localStorage.getItem("fraseDelDia"));
+                let fraseHoy;
+                if (dataGuardada && dataGuardada.fecha === hoy) {
+                fraseHoy = dataGuardada.frase;
+                } else {
+                fraseHoy = frases[Math.floor(Math.random() * frases.length)];
+                localStorage.setItem("fraseDelDia", JSON.stringify({
+                    fecha: hoy,
+                    frase: fraseHoy
+                }));
+                }
+                document.getElementById("frase").textContent = fraseHoy;
+            </script>
+        </div>
+        <br></br>
+        <div id="Secciones">
+            <p class="indicaciones">Ir a la sección</p>
+            <br></br>
+            <a class="viajar" href="#TikTok">TikTok</a>
+            <a class="viajar" href="#Youtube">YouTube</a>
+            <a class="viajar" href="#Twitch">Twitch</a>
+            <a class="viajar" href="#Twitter">Twitter/X</a>
+        </div>
         <div id="TikTok">
             <br></br>
             <a class="semititulo">TikTok</a>
@@ -38,10 +104,9 @@
         <div id="Twitch">
             <a class="semititulo">Twitch</a>
             <br></br>
-            <iframe class="twitchframe" id="twitch-chat" src="https://www.twitch.tv/embed/francriollo1/chat?parent=francriollo01.github.io" height="500" width="350"></iframe>
             <iframe class="twitchframe" id="twitch-stream" src="https://player.twitch.tv/?channel=francriollo1&parent=francriollo01.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
         </div>
-        <div>
+        <div id="Twitter">
             <br></br>
             <a class="semititulo">Twitter / X</a>
             <br></br>
@@ -51,4 +116,9 @@
             </blockquote> 
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
+        <div id="Instagram">
+
+        </div>
+        <br></br>
+        <a class="viajar"href="#titulo">Volver arriba</a>
     </main>
