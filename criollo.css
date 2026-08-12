@@ -1,147 +1,168 @@
 :root{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #0e0b30;
-    padding: 20px;
-    --color-principal: #102166;
-    --color-borde: rgb(3, 63, 63);
-    --color-fondoclaro: rgb(114, 203, 233);
-    animation-name: fadeAnimation;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
+    --color-principal: #0f1074;
+    --color-secundario: darkred;
+    --color-terciario: black;
+    --color-cuaternario: #0084d1;
+    --color-quinto: rgb(137, 255, 235);
+    --color-sexto: rgb(30, 40, 94);
+    --color-fondo: #c1f0ff;
 }
-@keyframes fadeAnimation {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+body{
+    background-color: var(--color-fondo);
+    margin: 0 0 40px 0;
+    font-family:'Courier New', Courier, monospace;
 }
-/* Titulo */
-header{
-    font-family: 'Courier New', Courier, monospace;
-    border: 3px solid var(--color-borde);
-    background-color: var(--color-principal);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    filter: drop-shadow(0px 0px 30px rgba(0,0,0,0.5));
-}
-@keyframes slideDownAnimation {
-  0% { transform: translateY(-100px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-header {
-  animation-name: slideDownAnimation;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
-}
-/* Menu */
-#secciones{
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 4px;
-  height: 180px;
-  box-shadow: 25px 25px 25px 0px rgba(0, 0, 0, 0.20);
-  border: 3px solid var(--color-borde);
-  box-sizing: border-box;
-}
-#indicaciones{
-  position: relative;
-  left: 20px;
-  font-size: 1.5em;
-  color: var(--color-principal);
-  font-weight: bold;
-}
-.viajar:not(:first-child){
-  position:relative;
-  left: 30px;
-}
-.viajar{
-  color: #102166;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  padding: 10px;
-  background-color: #b089d8;
-  width: 15px;
-  margin: auto;
-  margin-top: 4px;
-  border-radius: 30px;
-}
-.viajar:hover{
-  padding: 15px;
-}
-/* Redes */
-.semititulo:is(a){
-    text-decoration: none;
-    color: var(--color-principal);
-    background-color: lightblue;
-    background-size: 40px;
-    padding: 7px;
-    font-size: 1.8em;
-    font-weight: bold;
-    border-radius: 3px;
-}
-.tiktok-embed{
-    max-width: 780px; 
-    min-width: 288px;
-    border-radius: 2em;
-    border: 0.3em solid var(--color-borde);
-}
-.ytvideo {
-  width: 800px;
-  max-width: 100vw;
-  aspect-ratio: 16 / 9; 
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.ytvideo iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.twitter-tweet {
-  width: 100% !important;
-  max-width: 100%;
-      margin: 0 auto;
+#rahbody{
+    background-color: black;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    margin: 0;
 }
-#twitch-stream{
-    max-width: 780px; 
-    min-width: 288px;
-    border-radius: 2em;
-    border: 0.3em solid var(--color-borde);
-    width: 800px;
-    max-width: 100vw;
+#rah{
+    width: 45vw;
+    margin: 0;
+}
+#chillbody{
+    background-color: black;
+    margin: 0;
+}
+#chill{
+    width: 100vh;
     margin: 0 auto;
+    display: block;
+}
+.vidheader{
+    width: 100vw;
+    display: block;
+    height: 300px;
+    object-fit: cover;
+    margin: 77px 0 0 0;
+}
+header{
+    background-color: var(--color-terciario);
+    border-bottom: 4px solid black;
+}
+nav{
+    background-color: var(--color-terciario);
     display: flex;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
+    align-content: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
-.twitch-stream iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
+.itemnav{
+    color: var(--color-cuaternario);
+    text-decoration: none;
 }
-/* Pie de página */
-#sectorpc{
-  background-color: var(--color-fondoclaro);
-  padding: 4px;
-  border: 2px solid var(--color-borde);
+.itemnav:hover{
+    font-size: 18px;
+    color: var(--color-secundario)
+}
+#francriollo{
+    text-align: center;
+    color: var(--color-cuaternario);
+    margin: 0;
+    padding: 20px;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-decoration: none;
+}
+img:is(#redes){
+    width: 100vw;
+    max-width: 750px;
 }
 footer{
-    font-family: 'Courier New', Courier, monospace;
-    border: 3px solid var(--color-borde);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-terciario);
+}
+#imgtwitter{
+    width: 100vw;
+    max-width: 509px;
+    max-height: 400px;
+    margin: 0 auto;
+    display: block;
+}
+#divimgtwitter{
+    background-color: var(--color-terciario);
+}
+.tituloyenlace{
+    display: flex;
+    justify-content: left;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0;
     background-color: var(--color-principal);
     color: white;
-    text-align: center;
     padding: 20px;
-    filter: drop-shadow(0px 0px 30px rgba(0,0,0,0.5));
+}
+#divimgyoutube{
+    background-color: #0f0f0f;
+}
+#imgyoutube{
+    object-fit: cover;
+    min-height: 176px;
+    width: 100vw;
+    max-width: 1400px;
+    object-position: left center;
+}
+.irapp{
+    margin: 0 30px;
+    color: var(--color-quinto);
+    text-decoration: none;
+}
+.irapp:hover{
+    font-weight: bolder;
+    font-size: 17px;
+}
+#iframetwitch{
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+}
+#diviframetwitch{
+    background-color: var(--color-terciario);
+}
+#divtiktokembed{
+    background-color: black;
+    padding: 20px;
+}
+#sectorpc{
+    padding: 25px;
+    background-color: var(--color-sexto);
+    color: white;
+}
+#diviframeyoutube{
+    background-color: #0f0f0f;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#textoyoutube{
+    padding: 15px 80px 15px 15px;
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+#iframeyoutube{
+    border: 5px solid black;
+    border-radius: 2px;
 }
